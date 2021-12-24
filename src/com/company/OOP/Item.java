@@ -1,4 +1,4 @@
-package com.company.面向对象;
+package com.company.OOP;
 
 public class Item {
     private String name;
@@ -19,4 +19,10 @@ public class Item {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    void effect() {
+        System.out.println("使用物品");
+    }
+
+
 }

@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.面向对象.Hero;
-import com.company.面向对象.Item;
+import com.company.OOP.Hero;
+import com.company.OOP.Item;
 
 public class Main {
 

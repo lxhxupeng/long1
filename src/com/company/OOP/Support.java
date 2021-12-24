@@ -1,6 +1,6 @@
-package com.company.面向对象;
+package com.company.OOP;
 
-public class Support  extends Hero implements AP,AD,Healer{
+public class Support  extends Hero implements AP,AD,Healer,Mortal{
     @Override
     public void magicAttack() {
         System.out.println("magic attact");
@@ -15,5 +15,10 @@ public class Support  extends Hero implements AP,AD,Healer{
     public void heal() {
         System.out.println("heal hero");
 
+    }
+
+    @Override
+    public void die() {
+        System.out.println("sone fix heat is killed");
     }
 }

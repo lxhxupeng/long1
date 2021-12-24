@@ -1,4 +1,4 @@
-package com.company.面向对象;
+package com.company.OOP;
 
 public interface Healer {
     public void heal();

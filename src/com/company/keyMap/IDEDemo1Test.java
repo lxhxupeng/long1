@@ -1,6 +1,6 @@
 package com.company.keyMap;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert;
 
 class IDEDemo1Test {
     public IDEDemo1Test() {
