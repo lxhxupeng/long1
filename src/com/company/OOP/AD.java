@@ -2,5 +2,10 @@ package com.company.OOP;
 
 public interface AD {
 
-    public void pyhsicAttack();
+     void pyhsicAttack();
+
+    default void attact() {
+        System.out.println("AD attack");
+    }
+
 }

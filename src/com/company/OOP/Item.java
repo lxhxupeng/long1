@@ -1,6 +1,6 @@
 package com.company.OOP;
 
-public class Item {
+public class Item extends Object{
     private String name;
     private int price;
 
@@ -22,6 +22,16 @@ public class Item {
 
     void effect() {
         System.out.println("使用物品");
+    }
+
+    public String toString() {
+        return name;
+    }
+
+    public static void main(String[] args) {
+        Item item = new Item();
+        item.setName("set");
+        System.out.println(item.toString());
     }
 
 

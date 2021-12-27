@@ -10,16 +10,21 @@ package com.company.OOP;
 public interface Mortal {
     void die();
 
+    default  void revive() {
+        System.out.println("本英雄复活");
+    }
+
     public static void main(String[] args) {
         Hero gailun = new Hero();
         ADHero adc = new ADHero();
         APHero apc = new APHero();
         Support sp = new Support();
         gailun.kill(adc);
-        adc.die();
+        adc.revive();
+//        adc.die();
         gailun.kill(apc);
-        apc.die();
+//        apc.die();
         gailun.kill(sp);
-        sp.die();
+//        sp.die();
     }
 }

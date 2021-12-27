@@ -1,5 +1,12 @@
 package com.company.OOP;
 
 public interface AP {
-    public void magicAttack();
+    void magicAttack();
+
+    default void attact() {
+        System.out.println("AP attact");
+    }
+
+
+
 }

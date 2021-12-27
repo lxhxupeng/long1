@@ -10,4 +10,19 @@ public class ADHero extends Hero implements AD,Mortal {
     public void die() {
         System.out.println("AD is killed");
     }
+
+    public ADHero() {
+        System.out.println("ADHero Constructor");
+    }
+
+    public ADHero(String name) {
+        super(name);
+        System.out.println("ADHero Constructor one parameter");
+    }
+
+    public static void main(String[] args) {
+        new ADHero();
+        new ADHero("Delaiwen");
+
+    }
 }
