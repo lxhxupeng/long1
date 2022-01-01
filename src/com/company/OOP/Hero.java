@@ -8,8 +8,12 @@ public class Hero extends Object{
     }
 
     public Hero(String name) {
-        System.out.println("Hero Constructor one parameter");
+//        System.out.println("Hero Constructor one parameter");
         this.name = name;
+    }
+
+    public String toString() {
+        return name;
     }
 
     public float hp;
