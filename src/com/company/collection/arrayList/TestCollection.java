@@ -1,4 +1,4 @@
-package com.company.collection;
+package com.company.collection.arrayList;
 
 import com.company.OOP.Hero;
 
