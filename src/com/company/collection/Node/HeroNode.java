@@ -39,7 +39,7 @@ public class HeroNode {
     public List<Object> ls() {
         List<Object> lists = new ArrayList<>();
         if (null!= rightNode) {
-            lists.addAll(rightNode.ls());// 回调自己本身  这是
+            lists.addAll(rightNode.ls());// 回调自己本身  这就是递归  递归调用
         }
         lists.add(hero);
         if (null != leftNode) {
