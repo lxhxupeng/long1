@@ -11,7 +11,8 @@ public class Node {
 //    左节点
     public Node leftNode;
 //   右节点
-    public Node rightNoed;
+    public Node rightNode
+;
     //值
     public Object value;
 
@@ -25,10 +26,12 @@ public class Node {
                     leftNode = new Node();
                 leftNode.add(v);
             } else {
-                if (rightNoed == null) {
-                    rightNoed = new Node();
+                if (rightNode
+ == null) {
+                    rightNode
+ = new Node();
                 }
-                rightNoed.add(v);
+                rightNode.add(v);
             }
         }
 
@@ -41,8 +44,8 @@ public class Node {
             values.addAll(leftNode.values());
         }
         values.add(value);
-        if (null != rightNoed) {
-            values.addAll(rightNoed.values());
+        if (null != rightNode) {
+            values.addAll(rightNode.values());
         }
         return values;
     }
