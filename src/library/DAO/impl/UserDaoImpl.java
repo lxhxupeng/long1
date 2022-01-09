@@ -1,11 +1,11 @@
 package library.DAO.impl;
 
-import library.DAO.IUserDao;
+import library.DAO.UserDao;
 import library.PO.User;
 
 import java.sql.*;
 
-public class UserDaoImpl implements IUserDao {
+public class UserDaoImpl implements UserDao {
     String url = "jdbc:mysql://localhost:3306/library";
     String username = "root";
     String password = "123456";
@@ -14,8 +14,7 @@ public class UserDaoImpl implements IUserDao {
     public User findUserByNameAndPassword(String name, String pw) {
         User user = null;
         try {
-
-            Class.forName("com.mysql.jdbc.Driver"); //加载数据库驱动
+            Class.forName("com.mysql.cj.jdbc.Driver"); //加载数据库驱动
             Connection conn = DriverManager.getConnection(url, username, password);//链接对象
             String sql = "select * from user where name = ? and password = ?";
             PreparedStatement pst = conn.prepareStatement(sql);
@@ -28,8 +27,11 @@ public class UserDaoImpl implements IUserDao {
                 user.setFlag(rs.getString("name"));
                 user.setFlag(rs.getString("password"));
                 user.setFlag(rs.getString("flag"));
-                user.setFlag(rs.getString("id"));
+//                user.setFlag(rs.getString("id"));
             }
+            rs.close();
+            pst.close();
+            conn.close();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException throwables) {

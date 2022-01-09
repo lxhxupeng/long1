@@ -1,7 +1,8 @@
-package library.DAO;
+package library.service;
 
 import library.PO.User;
 
-public interface IUserDao {
+public interface UserService {
     public User findUserByNameAndPassword(String name, String password);
 }
+
