@@ -1,16 +1,17 @@
 package library.controller;
 
 import library.PO.User;
+import library.service.BookService;
+import library.service.Impl.BookServiceImpl;
 import library.service.Impl.UserServiceImpl;
 import library.service.UserService;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class libraryController {
     Scanner input = new Scanner(System.in);
     private UserService service = new UserServiceImpl();
+    private BookService bookService = new BookServiceImpl();
     public void start() {
         System.out.println("====================");
         System.out.println("welcom library");
@@ -38,13 +39,23 @@ public class libraryController {
                     System.out.println("\t5、 归还");
                     System.out.println("\t0、 退出");
                 }
-                System.out.println("input your choice:");
-                String choice = input.next();
+                System.out.print("input your choice:");
+                int choice = input.nextInt(); //这里选择数字类型的输入如
                 switch (choice) {
                     case 1:
                         //新增
-                        System.out.println("please creat your book id,name,title,author,publish,price,count");
-
+                        System.out.println("please creat your book id,title,author,publish,price,count");
+                        String[] book = new String[7];
+                        String sbook = input.next();
+                        book = sbook.split(",");
+                        String id = book[0];
+                        String title = book[1];
+                        String author = book[2];
+                        String publish = book[3];
+                        String price = book[4];
+                        String count = book[5];
+                        int num = bookService.insertBook(id, title, author, publish, price, count);
+                        System.out.println(num);
                     case 2:
                         //新增
                     case 3:
@@ -55,7 +66,6 @@ public class libraryController {
                         //新增
                     case 6:
                         //新增
-
                 }
                 break;
             } else {
